@@ -35,4 +35,7 @@ menu_3.insert(btn4)
 back = InlineKeyboardMarkup(row_width=1)
 btn2 = InlineKeyboardButton(text='◀️ Назад в меню',callback_data='back_to_menu')
 back.insert(btn1)
-back.insert(btn2)
+
+cancel = InlineKeyboardMarkup(row_width=1)
+btn1 = InlineKeyboardButton(text='Отмена',callback_data='cancel')
+cancel.insert(btn1)
