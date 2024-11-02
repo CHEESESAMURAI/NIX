@@ -1,7 +1,5 @@
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher, types, executor
 import sqlite3
-
-from django.db.migrations import executor
 
 from keyboards import markups as kb
 from config import config
@@ -410,9 +408,13 @@ async def menu(msg: types.Message):
 async def menu(msg: types.Message):
     global gg
     id = msg.from_user.id
+
+    await bot.send_message(7222770656,
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(gg[0]) + '\n на время : ' + '10:00')
     await bot.send_message(id,
                            te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(gg[0]) + '\n на время : '+'10:00')
     await bot.send_message(id, te.SUCCES_ZAP, reply_markup=kb.menu)
+    gg = []
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
 
 
@@ -420,10 +422,14 @@ async def menu(msg: types.Message):
 async def menu(msg: types.Message):
     global gg
     id = msg.from_user.id
+    await bot.send_message(7222770656,
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(
+                               gg[0]) + '\n на время : ' + '11:00')
     await bot.send_message(id,
-                           te.FINAL_EXCURS + str(gg[2]) + ' ' + str(gg[1]) + '\n в ' + str(
+                           te.FINAL_EXCURS  + ' ' + str(gg[1]) + '\n в ' + str(
                                gg[0]) + '\n на время : ' + '11:00')
     await bot.send_message(id, te.SUCCES_ZAP, reply_markup=kb.menu)
+    gg=[]
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
 
 
@@ -431,10 +437,14 @@ async def menu(msg: types.Message):
 async def menu(msg: types.Message):
     global gg
     id = msg.from_user.id
+    await bot.send_message(7222770656,
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(
+                               gg[0]) + '\n на время : ' + '12:00')
     await bot.send_message(id,
-                           te.FINAL_EXCURS + str(gg[2]) + ' ' + str(gg[1]) + '\n в ' + str(
+                           te.FINAL_EXCURS  + ' ' + str(gg[1]) + '\n в ' + str(
                                gg[0]) + '\n на время : ' + '12:00')
     await bot.send_message(id, te.SUCCES_ZAP, reply_markup=kb.menu)
+    gg = []
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
 
 
@@ -442,10 +452,14 @@ async def menu(msg: types.Message):
 async def menu(msg: types.Message):
     global gg
     id = msg.from_user.id
+    await bot.send_message(7222770656,
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(
+                               gg[0]) + '\n на время : ' + '13:00')
     await bot.send_message(id,
-                           te.FINAL_EXCURS + str(gg[2]) + ' ' + str(gg[1]) + '\n в ' + str(
+                           te.FINAL_EXCURS  + ' ' + str(gg[1]) + '\n в ' + str(
                                gg[0]) + '\n на время : ' + '13:00')
     await bot.send_message(id, te.SUCCES_ZAP, reply_markup=kb.menu)
+    gg = []
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
 
 
@@ -453,8 +467,11 @@ async def menu(msg: types.Message):
 async def menu(msg: types.Message):
     global gg
     id = msg.from_user.id
+    await bot.send_message(7222770656,
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(
+                               gg[0]) + '\n на время : ' + '14:00')
     await bot.send_message(id,
-                           te.FINAL_EXCURS + str(gg[2]) + ' ' + str(gg[1]) + '\n в ' + str(
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(
                                gg[0]) + '\n на время : ' + '14:00')
     await bot.send_message(id, te.SUCCES_ZAP, reply_markup=kb.menu)
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
@@ -464,9 +481,13 @@ async def menu(msg: types.Message):
 async def menu(msg: types.Message):
     global gg
     id = msg.from_user.id
-    await bot.send_message(id,
-                           te.FINAL_EXCURS + str(gg[2]) + ' ' + str(gg[1]) + '\n в ' + str(
+    await bot.send_message(7222770656,
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(
                                gg[0]) + '\n на время : ' + '15:00')
+    await bot.send_message(id,
+                           te.FINAL_EXCURS  + ' ' + str(gg[1]) + '\n в ' + str(
+                               gg[0]) + '\n на время : ' + '15:00')
+    gg = []
     await bot.send_message(id, te.SUCCES_ZAP, reply_markup=kb.menu)
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
 
@@ -475,10 +496,14 @@ async def menu(msg: types.Message):
 async def menu(msg: types.Message):
     global gg
     id = msg.from_user.id
+    await bot.send_message(7222770656,
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(
+                               gg[0]) + '\n на время : ' + '16:00')
     await bot.send_message(id,
-                           te.FINAL_EXCURS + str(gg[2]) + ' ' + str(gg[1]) + '\n в ' + str(
+                           te.FINAL_EXCURS  + ' ' + str(gg[1]) + '\n в ' + str(
                                gg[0]) + '\n на время : ' + '16:00')
     await bot.send_message(id, te.SUCCES_ZAP, reply_markup=kb.menu)
+    gg = []
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
 
 
@@ -486,10 +511,14 @@ async def menu(msg: types.Message):
 async def menu(msg: types.Message):
     global gg
     id = msg.from_user.id
+    await bot.send_message(7222770656,
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(
+                               gg[0]) + '\n на время : ' + '17:00')
     await bot.send_message(id,
-                           te.FINAL_EXCURS + str(gg[2]) + ' ' + str(gg[1]) + '\n в ' + str(
+                           te.FINAL_EXCURS  + ' ' + str(gg[1]) + '\n в ' + str(
                                gg[0]) + '\n на время : ' + '17:00')
     await bot.send_message(id, te.SUCCES_ZAP, reply_markup=kb.menu)
+    gg = []
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
     gg.clear()
 
