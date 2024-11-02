@@ -411,7 +411,7 @@ async def menu(msg: types.Message):
     global gg
     id = msg.from_user.id
     await bot.send_message(id,
-                           te.FINAL_EXCURS + str(gg[2]) + ' ' + str(gg[1]) + '\n в ' + str(gg[0]) + '\n на время : '+'10:00')
+                           te.FINAL_EXCURS + ' ' + str(gg[1]) + '\n в ' + str(gg[0]) + '\n на время : '+'10:00')
     await bot.send_message(id, te.SUCCES_ZAP, reply_markup=kb.menu)
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
 
@@ -520,6 +520,8 @@ async def menu(msg: types.Message):
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
 @dp.callback_query_handler(text='apr')
 async def menu(msg: types.Message):
+    global gg
+    gg.append('Апреля')
     id = msg.from_user.id
     await bot.send_message(id,te.EXCURSION_DATE,reply_markup=kb.calendar)
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
