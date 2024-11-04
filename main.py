@@ -65,6 +65,8 @@ async def menu(msg: types.Message):
 
 @dp.callback_query_handler(text='menu_1')
 async def menu(msg: types.Message):
+    global state
+    state = 6
     id = msg.from_user.id
     await bot.send_message(id,te.menu_1,reply_markup=kb.back)
     await bot.delete_message(msg.from_user.id, msg.message.message_id)
@@ -671,6 +673,10 @@ async def all_other_messages(message: types.Message):
                 state = 0
             except Exception as e:
                 print('сырный и тут')
+    elif state == 2:
+        await bot.send_message(g,'Ваше заявление успешно отправлено, если что либо не успели дописать, то отправьте повтороное завление в одном сообщении',reply_markup=kb.menu)
+        await bot.send_message(7222770656, 'Новое заявление \n\n' + message.text + message.from_user.username)
+        state = 0
     else:
         await bot.send_message(g,'Не понял вас, повторите попытки или сформулируйте мысли')
 
